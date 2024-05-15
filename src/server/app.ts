@@ -26,15 +26,9 @@ const START_SERVER = async () => {
     res.end("<h1>Hello World!</h1>")
   })
 
-  if (env.BUILD_MODE === "production") {
-    app.listen(process.env.PORT, () => {
-      console.log(`Hello World, I am running at PORT : ${process.env.PORT}`)
-    })
-  } else {
-    app.listen(env.APP_PORT, env.APP_HOST, () => {
-      console.log(`Hello World, I am running at http://${env.APP_HOST}:${port}`)
-    })
-  }
+  app.listen(process.env.PORT, () => {
+    console.log(`Hello World, I am running at http://${env.APP_HOST}:${port}`)
+  })
 
   exitHook(() => {
     console.log("Closing database connection")
