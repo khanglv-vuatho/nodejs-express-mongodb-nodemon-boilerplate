@@ -8,7 +8,6 @@
     "prestart": "npm run build",
     "start": "npm run build && nodemon build/src/server/app.js",
     "preserve": "npm run build",
-    "serve": "concurrently \"tsc -w\" & \"nodemon build/src/server/app.js\"",
     "dev": "nodemon --watch src --exec ts-node -r tsconfig-paths/register src/server/app.ts"
   },
   "author": "",
@@ -24,6 +23,7 @@
     "mongodb": "^6.6.1",
     "nodemon": "^3.1.0",
     "rimraf": "^5.0.5",
+    "ts-node": "^10.9.2",
     "tsconfig-paths": "^4.2.0"
   },
   "devDependencies": {
