@@ -10,7 +10,7 @@ class ApiError extends Error {
     super(message)
 
     // Set the name of this custom Error, default to "Error" if not set
-    this.name = "ApiError"
+    this.name = 'ApiError'
 
     // Assign the HTTP status code
     this.statusCode = statusCode
